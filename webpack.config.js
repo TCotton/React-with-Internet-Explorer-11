@@ -19,12 +19,11 @@ const plugins = [
         filename: "[name].[contenthash].css",
         chunkFilename: "[id].[contenthash].css",
     }),
-    new CopyWebpackPlugin({
+   /* new CopyWebpackPlugin({
         patterns: [
-            {from: "src/components", to: "components"},
             {from: "src/assets", to: "assets"},
         ],
-    }),
+    }),*/
 ];
 if (devMode) {
     // only enable hot in development
@@ -35,7 +34,7 @@ if (devMode) {
 }
 
 module.exports = {
-    entry: "./src/app.js",
+    entry: "./src/index.js",
     output: {
         path: path.join(__dirname, "/dist"),
         filename: "[name].[contenthash].js",
